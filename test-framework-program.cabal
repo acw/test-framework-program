@@ -1,5 +1,5 @@
 Name:                test-framework-program
-Version:             1.0
+Version:             1.1
 Cabal-Version:       >= 1.6
 Category:            Testing
 Synopsis:            Test framework support for running simple test programs.
@@ -14,8 +14,8 @@ Library
         Build-Depends:          base >= 3 && <= 6,
                                 directory >= 1 && <= 2,
                                 process >= 1.1 && <= 2,
-                                test-framework >= 0.2.0 && < 0.5.0
-        Extensions:             MultiParamTypeClasses
+                                test-framework >= 0.2.0 && < 1.0.0
+        Extensions:             MultiParamTypeClasses,DeriveDataTypeable
         Ghc-Options:            -Wall
 
 source-repository head

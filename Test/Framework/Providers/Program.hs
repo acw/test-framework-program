@@ -6,6 +6,7 @@ module Test.Framework.Providers.Program(
        )
  where
 
+import Data.Typeable
 import System.Directory
 import System.Exit
 import System.IO hiding (stdout, stderr)
@@ -25,6 +26,7 @@ data TestCaseResult  = Passed        | ProgramFailed ExitCode |
                        NotExecutable
 data TestCaseRunning = CheckExists | CheckRunnable | Running
 data TestCase        = TestCase Checker Checker FilePath [FilePath]
+ deriving (Typeable)
 
 instance Show TestCaseResult where
   show  Passed           = "OK"
