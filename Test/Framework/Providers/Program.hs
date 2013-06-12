@@ -45,7 +45,7 @@ instance TestResultlike TestCaseRunning TestCaseResult where
                       _      -> False
 
 instance Testlike TestCaseRunning TestCaseResult TestCase where
-  testTypeName _ = "Executable program test."
+  testTypeName _ = "Programs"
   runTest topts (TestCase outCheck errCheck prog args) = runImprovingIO $ do
     yieldImprovement CheckExists
     exists <- liftIO $ doesFileExist prog
